@@ -73,4 +73,21 @@ double gRec(unsigned i) {
 
 double gStack(unsigned i) {
     // TODO
+    ArrayStack<int> myStack; // create the stack that is stored in heap memory
+
+    while (i > 0){
+        myStack.push(i); // stores the amount of iterations to do the addition
+        --i;    // decrements the i each iteration, so the loop will end
+    }
+
+    cout << "Base case!\n";
+
+    double result = 3.2;
+
+    while (!myStack.isEmpty()){
+        myStack.pop(); //pops the i, n amounts of time, as long as it is not empty.
+        result += 1.1; //adds 1.1, n amounts of time, to the result. 
+    }
+
+    return result;
 }
